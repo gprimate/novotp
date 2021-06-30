@@ -316,19 +316,19 @@ void serverExec(char *buf,int clientSocket){
 
                     selectOperation(clientSocket,line[i]);
                 } else {
-                    sendMessageToClient(clientSocket,"Invalid command hereheh");  
+                    sendMessageToClient(clientSocket,"Invalid command");  
                 }
                 
             }else if(numOfTokens == 1){
                 //se o comando so tem 1 palavra eh pq eh list
                 listLocations(clientSocket);
             } else {
-                sendMessageToClient(clientSocket,"Invalid command hereh");           
+                sendMessageToClient(clientSocket,"Invalid command");           
             }
 
             
         } else {
-            sendMessageToClient(clientSocket,"Invalid command here");           
+            sendMessageToClient(clientSocket,"Invalid command");           
         }
     }   
 }
